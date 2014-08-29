@@ -1,0 +1,44 @@
+
+{% extends 'gab/base.html' %}
+
+
+{% block title %}Verification{% endblock %}
+
+{% block extra_head %}{% endblock %}
+
+{% block content %}
+		{% if registered %}
+			Thanks for registering! Check your email to see a verification link!
+		{% else %}
+			Are you registered? Something is wrong.
+		{% endif %}
+{% endblock %}
+
+{% block comments %}
+<!--
+Facebook sent ianmanesi@yahoo.com a confirmation email that has this embedded link:
+
+https://www.facebook.com/n/?confirmemail.php&e=ianmanesi%40yahoo.com&c=33650&ndid=9b7e7c8G5af4fc131cb5G0G14dG2a49a7fd&medium=email&mid=9b7e7c8G5af4fc131cb5G0G14dG2a49a7fd&bcode=1.1397615259.Abl3DqG5Qw7bQlIo&code=33650&n_m=ianmanesi%40yahoo.com
+
+Variables:
+e=ianmanesi%40yahoo.com
+c=33650
+ndid=9b7e7c8G5af4fc131cb5G0G14dG2a49a7fd
+medium=email
+mid=9b7e7c8G5af4fc131cb5G0G14dG2a49a7fd
+bcode=1.1397615259.Abl3DqG5Qw7bQlIo
+code=33650
+n_m=ianmanesi%40yahoo.com
+
+%40 is the url encoding for @
+
+Interpretation:
+ndid looks like a hash, repeated as mid
+c is an arbitrary code, repeated as code
+medium is the type of registration, presumably you could also verify with something else. 
+n_m and e are the email address associated, URL encoded. 
+
+Since everything is in the link I'm guessing this is a GET request. It checks the variables against the production database, and verifies the email. 
+
+-->
+{% endblock %}

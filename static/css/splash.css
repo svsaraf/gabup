@@ -1,0 +1,26 @@
+body {
+  background-color: black;
+}
+.container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.container .navbar-header {
+  margin-left: 100px;
+}
+
+.navbar-brand {
+  font-size: 40px;
+}
+
+.submitbuttonsvs {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+#signupbuttonsvs {
+  background-color: #FFFF33;
+  font-weight: bold;
+  font-size: 18px;
+}

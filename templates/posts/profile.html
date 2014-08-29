@@ -1,0 +1,342 @@
+{% extends 'gab/base.html' %}
+{% load static %}
+{% block title %}Welcome to Gabup!{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static "css/loaded.css" %}" />
+
+<style>
+  body {
+    font-size: 13px;
+  }
+
+  .nav-pills li a {
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+  }
+
+  .nav-pills li a:hover {
+    background-color: #dcdcdc ;
+  }
+
+  .nav-pills li.active a {
+    color: black;
+    background-color: inherit;
+    font-weight: bold;
+  }
+
+  .nav-pills li.active a:hover {
+    color: black;
+    background-color: #dcdcdc ;
+    font-weight: bold;
+  }
+
+  .postInput {
+    width: 85%;
+    padding-bottom: 50px;
+    background-color: white
+
+  }
+
+  textarea {
+    resize: none;
+  }
+  .feedobject {
+    margin-top: 10px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+  }
+  .mainposts {
+    padding-left: 0px;
+  }
+  .feedgab {
+    background-color: white;
+    font-size: 14px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .feedcomments {
+    background-color: #ededed;
+    font-size: 13px;
+    margin-top: 2px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .feedcomments a {
+    color: #3b5998;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  }
+
+  .feedobject {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  }
+
+  .responseform {
+    padding-left: 0px;
+  }
+
+  .responseinput {
+    height: 39px;
+
+  }
+  .feedobject a {
+    color: #3b5998;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  }
+
+  .feedgabcontainer {
+    padding-left: 0px;
+  }
+  .responsesubmit {
+
+  }
+
+  .bio {
+    padding-left: 5px;
+    padding-top: 15px;
+  }
+
+  .gabsubmit {
+    width: 14.5%;
+    height: 96px;
+    margin-top: -90px;
+  }
+
+  .white {
+    display: inline;
+    float: right;
+    font-family: "Times New Roman", sans-serif;
+    padding-right: 10px;
+    color: #9bb7b7;
+  }
+
+  .addfriend {
+    list-style-type: none;
+    float: left;
+    padding-bottom: 15px;
+    padding-left: 0px;
+  }
+
+  .addfriend a{
+    color: #3b5998;
+    font-weight: bold;
+  }
+
+  .acceptfriend {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  .acceptfriend a{
+    color: #3b5998;
+    font-weight: bold;
+  }
+
+  .friendrequest input {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #df691a;
+    border: none;
+    font-size: 11px;
+  }
+
+  .nav-pills .friends {
+    padding-left: 5px;
+  }
+  .nav-pills .friends li a {
+      color: #3b5998; 
+      font-weight: bold;
+  }
+
+  .nav-pills .friends li a:hover {
+      background-color: #F5F5F5;
+  }
+
+  .notif {
+    position: absolute;
+    background-color: #df691a;
+    font-family: courier;
+    color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: 30px;
+    margin-top: -40px;
+    border-radius: 3px;
+    font-size: 11px;
+  }
+</style>
+
+
+{% endblock %}
+
+{% block content %}
+<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="324" height="32" viewBox="0 0 324 32">
+<defs>
+<g id="icon-users">
+  <path class="path1" d="M22.969 25.168c-0.592-0.093-0.606-1.708-0.606-1.708s1.74-1.708 2.119-4.005c1.020 0 1.65-2.442 0.63-3.301 0.043-0.904 1.311-7.099-5.112-7.099-6.424 0-5.155 6.195-5.112 7.099-1.020 0.859-0.39 3.301 0.63 3.301 0.379 2.297 2.12 4.005 2.12 4.005s-0.014 1.615-0.606 1.708c-1.908 0.301-9.031 3.416-9.031 6.832h24c0-3.416-7.124-6.531-9.031-6.832zM10.752 25.713c1.378-0.848 3.051-1.635 4.423-2.107-0.492-0.701-1.040-1.654-1.385-2.783-0.481-0.393-0.873-0.954-1.125-1.644-0.252-0.691-0.348-1.464-0.269-2.178 0.056-0.512 0.202-0.99 0.427-1.409-0.136-1.456-0.232-4.314 1.639-6.398 0.725-0.808 1.642-1.389 2.741-1.74-0.196-2.024-1.224-4.399-5.202-4.399-6.424 0-5.155 6.195-5.112 7.099-1.020 0.859-0.39 3.301 0.63 3.301 0.379 2.297 2.12 4.005 2.12 4.005s-0.014 1.615-0.606 1.708c-1.908 0.301-9.031 3.416-9.031 6.832h10.3c0.147-0.096 0.297-0.192 0.452-0.287z" />
+</g>
+<g id="icon-earth">
+  <path class="path1" d="M27.314 4.686c3.022 3.022 4.686 7.040 4.686 11.314s-1.664 8.292-4.686 11.314c-3.022 3.022-7.040 4.686-11.314 4.686-4.274 0-8.292-1.664-11.314-4.686-3.022-3.022-4.686-7.040-4.686-11.314 0-4.274 1.664-8.292 4.686-11.314 3.022-3.022 7.040-4.686 11.314-4.686 4.274 0 8.292 1.664 11.314 4.686zM25.899 25.9c1.971-1.971 3.281-4.425 3.821-7.096-0.421 0.62-0.824 0.85-1.073-0.538-0.257-2.262-2.335-0.817-3.641-1.621-1.375 0.927-4.466-1.802-3.941 1.276 0.81 1.388 4.375-1.858 2.598 1.079-1.134 2.050-4.145 6.592-3.753 8.946 0.049 3.43-3.504 0.715-4.729-0.422-0.824-2.279-0.281-6.262-2.434-7.378-2.338-0.102-4.344-0.314-5.25-2.927-0.545-1.87 0.58-4.653 2.584-5.083 2.933-1.843 3.98 2.158 6.731 2.232 0.854-0.894 3.182-1.178 3.375-2.18-1.805-0.318 2.29-1.517-0.173-2.199-1.358 0.16-2.234 1.409-1.512 2.467-2.632 0.614-2.717-3.809-5.247-2.414-0.064 2.206-4.132 0.715-1.407 0.268 0.936-0.409-1.527-1.594-0.196-1.379 0.654-0.036 2.854-0.807 2.259-1.325 1.225-0.761 2.255 1.822 3.454-0.059 0.866-1.446-0.363-1.713-1.448-0.98-0.612-0.685 1.080-2.165 2.573-2.804 0.497-0.213 0.973-0.329 1.336-0.296 0.752 0.868 2.142 1.019 2.215-0.104-1.862-0.892-3.915-1.363-6.040-1.363-3.051 0-5.952 0.969-8.353 2.762 0.645 0.296 1.012 0.664 0.39 1.134-0.483 1.439-2.443 3.371-4.163 3.098-0.893 1.54-1.482 3.238-1.733 5.017 1.441 0.477 1.773 1.42 1.464 1.736-0.734 0.64-1.185 1.548-1.418 2.541 0.469 2.87 1.818 5.515 3.915 7.612 2.644 2.644 6.16 4.1 9.899 4.1 3.739 0 7.255-1.456 9.899-4.1z" />
+</g>
+</defs></svg>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">gabup</a>
+        </div>
+<div class="navbar-collapse collapse">
+
+<ul class="nav navbar-nav">
+            <li class="navbar-form navbar-left">
+              <form class="navbar-form nav nav-bar" id="searchform" method="get" action="/search/">
+                <input type="text" class="form-control col-lg-5" name="searchinput" placeholder="Search">
+              </form>
+              </li>
+            <li class="menulink"><a href="/profile/{{ current_profile.userid }}">{{ current_user.first_name }} {{ current_user.last_name }}</a></li> 
+            <li class="menulink"><a href="/">Home</a></li> 
+            <li class="menulink"><a href="/profile/{{ current_profile.userid }}"><svg class="icon icon-users" viewBox="0 0 32 32"><use xlink:href="#icon-users"></use></svg></a>{% if friendnots %}<div class="notif">{{ friendnots }}</div>{% endif %}</li>
+            <li class="menulink"><a href="#"><svg class="icon icon-users" viewBox="0 0 32 32"><use xlink:href="#icon-earth"></use></svg></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+            <li class="menulink"><a href="/logout/">Logout</a></li>
+          </ul>
+</div>
+    </div>
+</div>
+
+
+    <div class="container">
+
+      <div class="page-header" id="banner">
+        <div class="row" style="padding: 35px 15px 0 15px">
+
+        </div>
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="bs-component">
+              <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+                <li class="active"><a href="/profile/{{ profile.userid }}">{{ user.first_name }} {{ user.last_name }}</a>
+                <li class="bio">{{ profile.bio }}</li>
+                {% if profile.userid == current_profile.userid %}
+                <form id="biochange" action="/change_bio/" method="post">
+                  {% csrf_token %}
+                  <input id="bioinput" type="text" name="bio" placeholder="Change bio here!"></input>
+                </form>
+                {% endif %}
+                <br>
+                <br>
+                  <div class="friends" >
+                  {% if friends %}
+                      Friends:
+                  <ul>
+                  {% for key in friends.items %}
+                    <li><a href="/profile/{{ key.1 }}">{{ key.0 }}</a></li>
+                  {% endfor %}
+                  </ul>
+                  {% else %}
+                  {% endif %}
+                  </div>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="col-lg-8 mainposts" style="padding-left: 15px;"> 
+          hello
+          </div>
+          <div class="col-lg-2" style="background-color: white; padding-bottom: 25px;">
+          <div class="navbar-collapse collapse" style="padding-left: 0px; padding-right: 0px">
+            <div class="bs-component">
+              <ul class="nav-stacked acceptfriend" style="max-width: 300px;">
+              <h5 style="font-weight: bold;">Friend Requests</h5>
+              {% if friendrequests %}
+
+              {% for key in friendrequests.items %}
+                <li><a href="/profile/{{ key.1 }}">{{ key.0 }}</a><div class="white orangelink"><form class="friendrequest" action="/friends/accept/{{ key.1 }}/" method="post">{% csrf_token %}<input type="submit" value="Accept!"/></form></div></li>
+              {% endfor %}
+              {% else %}
+              No Friend Requests here!
+              {% endif %}
+              </ul>
+            </div>
+             <div class="bs-component">
+              <ul class="nav-stacked acceptfriend" style="max-width: 300px;">
+              <h5 style="font-weight: bold;">Suggested Friends</h5>
+              {% if potentialfriends %}
+              {% for key in potentialfriends.items %}
+                <li><a href="/profile/{{ key.1 }}">{{ key.0 }}</a><div class="white orangelink"><form class="friendrequest" action="/friends/request/{{ key.1 }}/" method="post">{% csrf_token %}<input type="submit" value="Add!"/></form></div></li>
+              {% endfor %}
+              {% else %}
+              No Suggested Friends here!
+              {% endif %}
+              </ul>
+            </div>
+            </div>
+          <div class="row" style="padding: 250px 15px 0 15px">
+          </div>
+    </div>
+    </div>
+        
+</div>
+<div class="row">
+          <div class="col-lg-12">
+            <ul class="list-unstyled">
+             <!-- <li><a href="#">About</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">FAQ</a></li>-->
+              Copyright © 2014 Gabup. All rights reserved.
+             
+            </ul>
+
+          </div>
+        </div>
+</div>
+</div>
+{% endblock %}
+
+{% block scripts %}<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+ function change_biofield() {
+    var board = $('#bioinput').val();
+    //alert(board);
+    $.ajax({
+        type: "POST",
+        url: "/change_bio/",  // or just url: "/my-url/path/"
+        data: {
+            csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value,
+            bio: board,
+        },
+        success: function(data) {
+            $(".bio").text(data);
+            $("#bioinput").val("");
+        },
+        error: function(xhr, textStatus, errorThrown) {
+            //alert("Please report this error: "+errorThrown+xhr.status+xhr.responseText);
+        }
+    });
+  }
+
+$(document).ready(function(){ 
+  /*ga(‘set’, ‘&uid’, {% templatetag openvariable %} {{ current_user.username }} {% templatetag closevariable %}); // Set the user ID using signed-in user_id.
+       */     
+  //$("div").css("border", "3px solid red");
+  $("#biochange").submit(function(event) {
+    change_biofield();
+    event.preventDefault();
+  });
+
+  
+});
+</script>{% endblock %}

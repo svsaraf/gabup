@@ -1,0 +1,6 @@
+autoload
+build
+dbindexer
+django
+djangoappengine
+djangotoolbox

@@ -1,0 +1,34 @@
+  .navbar-form {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 15px;
+    padding-right: 2px;
+  }
+
+  .form-control {
+    height: 30px;
+  }
+
+  .navbar-form .form-control {
+    width: 295px;
+  }
+
+  .nav .navbar-nav .navbar-right {
+    display: inline-block;
+  }
+
+
+  .menulink {
+    font-size: 14px;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    fill: #ebebeb;
+  }
+
+  .logoutbutton {
+    padding-left: 70px;
+  }

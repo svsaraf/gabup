@@ -1,0 +1,100 @@
+{% extends 'gab/base.html' %}
+{% load static %}
+{% block title %}Welcome to Gabup!{% endblock %}
+
+{% block extra_head %}
+<style>
+    #submitLogin {
+        background-color: #FFFF33;
+        font-size: 17px;
+    }
+
+    .control-label {
+        font-size: 17px;
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">gabup</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          
+
+          <ul class="nav navbar-nav navbar-right">
+            
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="page-header" id="banner">
+        <div class="row" style="padding: 65px 15px 0 15px">
+
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+          {{ alert_message }}
+          </div>
+
+          <div class="col-lg-4" style="padding: 15px 15px 0 15px;">
+            <div class="well sponsor">
+                <div class="clearfix">
+                <form id="login_form" method="post" action="/login/">
+                <fieldset>
+                      {% csrf_token %}
+                <div class="form-group">
+                  <label class="control-label" for="focusedInput">Username:</label>
+                  <input name="username" class="form-control" id="focusedInput" type="text" placeholder="" value="">
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label" for="disabledInput">Password:</label>
+                  <input name="password" class="form-control" id="focusedInput" type="password" placeholder="">
+                </div>
+
+                <div class="form-group">
+                  <input type="submit" class="form-control" id="submitLogin" value="Log In">
+                </div>
+                </fieldset>
+              </form>
+                </div>
+              </a>
+            </div>
+           <div class="col-lg-4" style="padding: 15px 15px 0 15px;">
+           </div>
+          <div class="row" style="padding: 250px 15px 0 15px">
+
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="list-unstyled">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">FAQ</a></li>
+              Copyright © 2014 Gabup. All rights reserved.
+             
+            </ul>
+
+          </div>
+        </div>
+
+
+    </div>
+{% endblock %}
+
+{% block scripts %}<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>{% endblock %}

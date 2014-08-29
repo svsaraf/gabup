@@ -1,0 +1,477 @@
+[
+{
+    "pk": 4679521487814656, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "canpost", 
+        "name": "can post", 
+        "app_label": "posts"
+    }
+},
+{
+    "pk": 5066549580791808, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "group", 
+        "name": "group", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 5101733952880640, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "userprofile", 
+        "name": "user profile", 
+        "app_label": "gab"
+    }
+},
+{
+    "pk": 5136918324969472, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "session", 
+        "name": "session", 
+        "app_label": "sessions"
+    }
+},
+{
+    "pk": 5277655813324800, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "category", 
+        "name": "category", 
+        "app_label": "tango"
+    }
+},
+{
+    "pk": 5383208929591296, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "conversation", 
+        "name": "conversation", 
+        "app_label": "posts"
+    }
+},
+{
+    "pk": 5418393301680128, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "logentry", 
+        "name": "log entry", 
+        "app_label": "admin"
+    }
+},
+{
+    "pk": 5488762045857792, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "contenttype", 
+        "name": "content type", 
+        "app_label": "contenttypes"
+    }
+},
+{
+    "pk": 5629499534213120, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "permission", 
+        "name": "permission", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 5805421394657280, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "listfriendtoconversation", 
+        "name": "list friend to conversation", 
+        "app_label": "posts"
+    }
+},
+{
+    "pk": 6192449487634432, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "user", 
+        "name": "user", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 6403555720167424, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "page", 
+        "name": "page", 
+        "app_label": "tango"
+    }
+},
+{
+    "pk": 6509108836433920, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "gab", 
+        "name": "gab", 
+        "app_label": "posts"
+    }
+},
+{
+    "pk": "09mx3thdq74zxk0cdsx24z54vl42k34b", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2014-05-07T16:21:38.133", 
+        "session_data": "ZGRhNjkyMTIyNzQ0OGRlYjM4NjNiZWM3NWE5NzQ0NjA0MjlmNWE2YzqAAn1xAChVEl9hdXRoX3VzZXJfYmFja2VuZHEBVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHECVQ1fYXV0aF91c2VyX2lkcQOKBwAAAAAAgBV1Lg=="
+    }
+},
+{
+    "pk": 4538783999459328, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_page", 
+        "name": "Can delete page", 
+        "content_type": 6403555720167424
+    }
+},
+{
+    "pk": 4573968371548160, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_contenttype", 
+        "name": "Can delete content type", 
+        "content_type": 5488762045857792
+    }
+},
+{
+    "pk": 4609152743636992, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_gab", 
+        "name": "Can change gab", 
+        "content_type": 6509108836433920
+    }
+},
+{
+    "pk": 4644337115725824, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_group", 
+        "name": "Can delete group", 
+        "content_type": 5066549580791808
+    }
+},
+{
+    "pk": 4714705859903488, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_logentry", 
+        "name": "Can delete log entry", 
+        "content_type": 5418393301680128
+    }
+},
+{
+    "pk": 4785074604081152, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_permission", 
+        "name": "Can add permission", 
+        "content_type": 5629499534213120
+    }
+},
+{
+    "pk": 4820258976169984, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_userprofile", 
+        "name": "Can add user profile", 
+        "content_type": 5101733952880640
+    }
+},
+{
+    "pk": 4855443348258816, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_session", 
+        "name": "Can delete session", 
+        "content_type": 5136918324969472
+    }
+},
+{
+    "pk": 4890627720347648, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_gab", 
+        "name": "Can delete gab", 
+        "content_type": 6509108836433920
+    }
+},
+{
+    "pk": 4925812092436480, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_permission", 
+        "name": "Can delete permission", 
+        "content_type": 5629499534213120
+    }
+},
+{
+    "pk": 4960996464525312, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_canpost", 
+        "name": "Can add can post", 
+        "content_type": 4679521487814656
+    }
+},
+{
+    "pk": 4996180836614144, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_category", 
+        "name": "Can change category", 
+        "content_type": 5277655813324800
+    }
+},
+{
+    "pk": 5172102697058304, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_conversation", 
+        "name": "Can add conversation", 
+        "content_type": 5383208929591296
+    }
+},
+{
+    "pk": 5207287069147136, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_group", 
+        "name": "Can change group", 
+        "content_type": 5066549580791808
+    }
+},
+{
+    "pk": 5242471441235968, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_listfriendtoconversation", 
+        "name": "Can add list friend to conversation", 
+        "content_type": 5805421394657280
+    }
+},
+{
+    "pk": 5348024557502464, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_group", 
+        "name": "Can add group", 
+        "content_type": 5066549580791808
+    }
+},
+{
+    "pk": 5523946417946624, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_conversation", 
+        "name": "Can change conversation", 
+        "content_type": 5383208929591296
+    }
+},
+{
+    "pk": 5559130790035456, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_page", 
+        "name": "Can change page", 
+        "content_type": 6403555720167424
+    }
+},
+{
+    "pk": 5664683906301952, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_page", 
+        "name": "Can add page", 
+        "content_type": 6403555720167424
+    }
+},
+{
+    "pk": 5699868278390784, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_contenttype", 
+        "name": "Can change content type", 
+        "content_type": 5488762045857792
+    }
+},
+{
+    "pk": 5735052650479616, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_listfriendtoconversation", 
+        "name": "Can delete list friend to conversation", 
+        "content_type": 5805421394657280
+    }
+},
+{
+    "pk": 5770237022568448, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_user", 
+        "name": "Can change user", 
+        "content_type": 6192449487634432
+    }
+},
+{
+    "pk": 5840605766746112, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_logentry", 
+        "name": "Can change log entry", 
+        "content_type": 5418393301680128
+    }
+},
+{
+    "pk": 5910974510923776, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_user", 
+        "name": "Can delete user", 
+        "content_type": 6192449487634432
+    }
+},
+{
+    "pk": 5946158883012608, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_userprofile", 
+        "name": "Can change user profile", 
+        "content_type": 5101733952880640
+    }
+},
+{
+    "pk": 5981343255101440, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_session", 
+        "name": "Can change session", 
+        "content_type": 5136918324969472
+    }
+},
+{
+    "pk": 6016527627190272, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_canpost", 
+        "name": "Can delete can post", 
+        "content_type": 4679521487814656
+    }
+},
+{
+    "pk": 6086896371367936, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_listfriendtoconversation", 
+        "name": "Can change list friend to conversation", 
+        "content_type": 5805421394657280
+    }
+},
+{
+    "pk": 6122080743456768, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_category", 
+        "name": "Can add category", 
+        "content_type": 5277655813324800
+    }
+},
+{
+    "pk": 6227633859723264, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_userprofile", 
+        "name": "Can delete user profile", 
+        "content_type": 5101733952880640
+    }
+},
+{
+    "pk": 6262818231812096, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_session", 
+        "name": "Can add session", 
+        "content_type": 5136918324969472
+    }
+},
+{
+    "pk": 6298002603900928, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_canpost", 
+        "name": "Can change can post", 
+        "content_type": 4679521487814656
+    }
+},
+{
+    "pk": 6333186975989760, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_permission", 
+        "name": "Can change permission", 
+        "content_type": 5629499534213120
+    }
+},
+{
+    "pk": 6368371348078592, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_conversation", 
+        "name": "Can delete conversation", 
+        "content_type": 5383208929591296
+    }
+},
+{
+    "pk": 6473924464345088, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_user", 
+        "name": "Can add user", 
+        "content_type": 6192449487634432
+    }
+},
+{
+    "pk": 6544293208522752, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_logentry", 
+        "name": "Can add log entry", 
+        "content_type": 5418393301680128
+    }
+},
+{
+    "pk": 6614661952700416, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_contenttype", 
+        "name": "Can add content type", 
+        "content_type": 5488762045857792
+    }
+},
+{
+    "pk": 6649846324789248, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_gab", 
+        "name": "Can add gab", 
+        "content_type": 6509108836433920
+    }
+},
+{
+    "pk": 6685030696878080, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_category", 
+        "name": "Can delete category", 
+        "content_type": 5277655813324800
+    }
+}
