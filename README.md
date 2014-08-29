@@ -7,21 +7,18 @@ If you're looking at this you are most likely a potential employer. I don't usua
 - Register with an email address
 - Receive verification email from gabup
 - Login using your username and password
-
 - View posts designated as public
 - View posts designated as private
 - View posts under a pseudonym
 - View a profile of a friend
 - View your own profile
-
--Write posts with the above privacy features.
--Comment on posts. 
--Edit your profile bio
-
--Friend people
--Accept friend requests
--Basic notification system
--Reddit style 'link list'
+- Write posts with the above privacy features.
+- Comment on posts. 
+- Edit your profile bio
+- Friend people
+- Accept friend requests
+- Basic notification system
+- Reddit style 'link list'
 
 ######Skills I needed to build this:
 
@@ -34,7 +31,6 @@ If you're looking at this you are most likely a potential employer. I don't usua
   - Gabs and Comments
   - Link building system
   - Voting
-- Friending
  
 ######To be built:
 - Voting in reddit style link list
