@@ -1,4 +1,4 @@
-This is a social network clone I created. 
+#This is a social network clone I created. 
 
 If you're looking at this you are most likely a potential employer. I don't usually put my projects on github, but you're free to ask me about the nuances of any of this and I'll happily explain it. I'll also probably (if you let me) talk your ears off about what my most annoying bugs were!
 

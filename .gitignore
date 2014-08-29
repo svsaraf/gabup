@@ -4,3 +4,8 @@ dbindexer
 django
 djangoappengine
 djangotoolbox
+app.yaml
+myapp/settings.py
+myapp/settings.pyc
+index.yaml
+*.pyc
